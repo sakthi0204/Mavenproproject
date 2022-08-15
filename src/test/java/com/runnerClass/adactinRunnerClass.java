@@ -14,18 +14,18 @@ public class adactinRunnerClass extends Base_Class2 {
 	public static WebDriver driver=Base_Class2.browserLaunch("chrome");
 	public static PageObjectManager pom=new PageObjectManager(driver);
 	static Logger log = Logger.getLogger(adactinRunnerClass.class);
+	
 	public static void main(String[] args) throws Throwable {
 		
 		
 		String passurl = FileReaderManager.getInstanceFrm().getinstanceCR().passurl();
 		
-		
 		getUrl(passurl);//"https://adactinhotelapp.com/index.php"
-//		String username = FileReaderManager.getInstanceFrm().getinstanceCR().passUsername();
-		String username = particular_Data("C:\\\\Users\\\\ELCOT\\\\Desktop\\\\writeData.xlsx", 1, 1, 0);
+		String username = FileReaderManager.getInstanceFrm().getinstanceCR().passUsername();
+//		String username = particular_Data("C:\\\\Users\\\\ELCOT\\\\Desktop\\\\writeData.xlsx", 1, 1, 0);
 		sendkey(pom.getInstancelp().getUsername(), username);
-//		String password = FileReaderManager.getInstanceFrm().getinstanceCR().passPassword();
-		String password = particular_Data("C:\\\\Users\\\\ELCOT\\\\Desktop\\\\writeData.xlsx", 1, 1, 1);
+		String password = FileReaderManager.getInstanceFrm().getinstanceCR().passPassword();
+//		String password = particular_Data("C:\\\\Users\\\\ELCOT\\\\Desktop\\\\writeData.xlsx", 1, 1, 1);
 		sendkey(pom.getInstancelp().getPassword(), password);
 		toclick(pom.getInstancelp().getLogin());
 		

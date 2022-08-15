@@ -92,6 +92,10 @@ public class Configuration_Reader {
 		String cvvnum = p.getProperty("cvvnum");
 		return cvvnum;
 	}
+	public String passBrowser() {
+		String property = p.getProperty("browser");
+		return property;
+	}
 
 	
 	
