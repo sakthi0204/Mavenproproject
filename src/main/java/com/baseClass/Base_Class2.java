@@ -37,7 +37,7 @@ public class Base_Class2 {
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\ELCOT\\eclipse-workspace\\SeleniumOctProject\\driver\\chromedriver.exe");
+					"C:\\Users\\ELCOT\\eclipse-workspace\\MavenProProject\\driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "ccc");
